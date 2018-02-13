@@ -9,7 +9,8 @@ namespace TestCarApplication.Constants
     class MainMenuConstants
     {
         //Messages
-        public const string WelcomeMessage = "Welcome to Test car app! What would you like to do?";
+        public const string WelcomeMessage = "                                      Welcome to Test car app! What would you like to do?";
+        public const string MainMenuHeader = "======= MAIN MENU ======= ";
         public const string QuitMessage = "Bye!";
         public const string EntryNotRecognized = "Chosen option has not been recognized, please try again.";
 
@@ -29,7 +30,9 @@ namespace TestCarApplication.Constants
         public const string LoadCarChoice = "2";
         public const string ViewExisitngCarsChoice = "3";
         public const string QuitAppChoice = "Q";
+        public const string GoBackChoice = "B";
 
-        
+        //GENERAL
+        public const string GoBackMenuText = "B - Go back.";
     }
 }

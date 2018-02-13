@@ -13,13 +13,14 @@ namespace TestCarApplication.Menus
     {
         public static void DisplayMenu()
         {
+            Console.WriteLine();
+            Console.WriteLine(MainMenuConstants.MainMenuHeader);
+            Console.WriteLine();
 
             foreach (string optionText in MainMenuConstants.MenuOptionsDisplayList)
             {
                 Console.WriteLine(optionText);
                 Console.WriteLine();
-
-                
             }
 
         }

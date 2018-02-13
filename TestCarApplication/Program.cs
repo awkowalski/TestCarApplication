@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using TestCarApplication.Classes;
 using TestCarApplication.Constants;
 using TestCarApplication.Menus;
+using TestCarApplication.Workers;
 
 namespace TestCarApplication
 {
@@ -18,27 +19,26 @@ namespace TestCarApplication
         static void Main(string[] args)
         {
             continueApp = true;
-
+            Console.WriteLine(MainMenuConstants.WelcomeMessage);
+            Console.WriteLine();
             do
             {
-                Console.WriteLine(MainMenuConstants.WelcomeMessage);
-                Console.WriteLine();
-
                 MainMenu.DisplayMenu();
                 Console.WriteLine();
 
                 var UserEntry = Console.ReadLine();
 
 
-                do
-                {
+                //do
+                //{
                     switch (UserEntry.ToUpper())
                     {
                         case MainMenuConstants.AddCarChoice:
+                            AddCarMenu.Display();
                             //Workers.AddCar();
                             break;
                         case MainMenuConstants.LoadCarChoice:
-                            //Workers.LoadCar();
+                            LoadCarMenu.Display();
                             break;
                         case MainMenuConstants.ViewExisitngCarsChoice:
                             //Workers.ViewExistingCars();
@@ -47,15 +47,22 @@ namespace TestCarApplication
                             continueApp = false;
                             break;
                         default:
+                            Console.WriteLine();
+                            Statics.WarningConsole();
                             Console.WriteLine(MainMenuConstants.EntryNotRecognized);
+                            Statics.NormalConsole();
                             break;
                     }
-                } while (continueApp);
+                //} while (continueApp);
 
             } while (continueApp);
 
             Console.WriteLine(MainMenuConstants.QuitMessage);
 
+        }
+
+        public static void validateUserEntry(string UserEntry)
+        {
 
 
         }
